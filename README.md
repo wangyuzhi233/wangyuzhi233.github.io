@@ -13,6 +13,7 @@
 
 ## 添加文章。
 1.更改js/cate.js当中的changeCate函数，需要改变 标签名字_Number 这个变量 +1
+
 2.在js/blog.json添加新信息。
 ```javascript
     {
