@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>小智的博客</title>
-        <link rel="stylesheet" href="css/bulma.min.css">
+        <link rel="stylesheet" href="../../css/bulma.min.css">
     </head>
     <body>
         <section class="hero is-primary">
@@ -22,8 +22,8 @@
                 <div class="tile is-child box">
                     <p class="title">联系我</p>
                     <p>
-                        <a href="https://github.com/wangyuzhi233"><img src="pic/github.png" alt="Github" width="25" height="25" /></a>
-                        <a href="https://www.zhihu.com/people/wangxiaozhi6"><img src="pic/知乎.png" alt="知乎" width="25" height="25" /></a>
+                        <a href="https://github.com/wangyuzhi233"><img src="../../pic/github.png" alt="Github" width="25" height="25" /></a>
+                        <a href="https://www.zhihu.com/people/wangxiaozhi6"><img src="../../pic/知乎.png" alt="知乎" width="25" height="25" /></a>
                     </p>
                 </div>
                 <div class="tile is-child box">
@@ -32,10 +32,12 @@
             </div>
             <div class="tile is-vertical is-parent">
                 <div class="tile is-child box">
-                    <p class="title">最近文章</p>
+                    <p class="title"><a href="https://wangyuzhi233.github.io">返回首页</a></p>
                 </div>
                 <div class="tile is-child box">
-                    <p class="title">sss</p>
+                    <time></time>
+                    <p class="title">DirectX12的一些小知识</p>
+                    <p>新接触了DX12，发现这种API真的威力无穷，但是随之而来的缺点就是API贴近硬件难以上手，文档不充分。避免遗忘就先在blog上记录一下。</p>
                 </div>
             </div>
         </div>
@@ -47,18 +49,5 @@
             </p>
             </div>
         </footer>
-
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script>
-                $.ajax({
-                    url: "js/blog.json",//json文件位置
-                    type: "GET",//请求方式为get
-                    dataType: "json", //返回数据格式为json
-                    success: function(data) {//请求成功完成后要执行的方法 
-
-                    }
-                })
-        </script>
-
     </body>
 </html>
