@@ -25,5 +25,5 @@
     }
 
 ```
-3.拷贝template/d12.html到blog/标签名字/。并将第五行的index + 1。参考json的数量
+3.拷贝template/d12.html到blog/标签名字/。并将第五行的index + 1。参考json的数量。然后编写博客
 
