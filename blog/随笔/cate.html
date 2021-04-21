@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang ="zh-cn">
+    <head>
+        <script>
+            let cate_name = "随笔";
+        </script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>小智的博客</title>
+        <link rel="stylesheet" href="../../css/bulma.min.css">
+    </head>
+    <body>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <p class="title">
+                    小智的博客
+                </p>
+                <p class="subtitle">
+                    随便写写
+                </p>
+            </div>
+        </section>
+        <div class="tile is-ancestor">
+            <div class="tile is-4 is-vertical is-parent">
+                <div class="tile is-child box">
+                    <p class="title">联系我</p>
+                    <p>
+                        <a href="https://github.com/wangyuzhi233"><img src="../../pic/github.png" alt="Github" width="25" height="25" /></a>
+                        <a href="https://www.zhihu.com/people/wangxiaozhi6"><img src="../../pic/知乎.png" alt="知乎" width="25" height="25" /></a>
+                    </p>
+                </div>
+                <div class="tile is-child box">
+                    <p class="title">分类</p>
+                    <ul id ="mylist">
+                    </ul>
+                </div>
+            </div>
+            <div class="tile is-vertical is-parent" id = "add">
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="content has-text-centered">
+            <p>
+                <strong>小智的博客</strong>
+            </p>
+            </div>
+        </footer>
+
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/cate.js"></script>
+        <script>
+            
+            
+
+            changeCate("../../");
+            $.getJSON("../../js/blog.json", function(data) {
+                let num = data.length;
+                for(let i = num - 1 ; i >= 0; --i){
+                    if(data[i].categories != cate_name){
+                        continue;
+                    }
+                    let title = document.createElement("p");
+                    title.setAttribute("class","title");
+                    title.innerText = data[i].title;
+                    let firstpara = document.createElement("p");
+                    firstpara.innerText = data[i].firstparagraph;
+                    let lookall = document.createElement("a");
+                    lookall.setAttribute("href","../../" + data[i].url);
+                    lookall.innerText = "查看全文";
+                    let temp_p = document.createElement("p");
+                    temp_p.appendChild(lookall);
+                    let allpara = document.createElement("div");
+                    allpara.classList.add("tile","is-child","box");
+                    allpara.appendChild(title);
+                    allpara.appendChild(firstpara);
+                    allpara.appendChild(temp_p);
+                    $("#add").append(allpara);
+                }
+            });
+        </script>
+    </body>
+</html>

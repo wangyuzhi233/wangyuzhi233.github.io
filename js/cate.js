@@ -12,5 +12,10 @@ function changeCate(path){
     let DirectX_URL = "blog/DirectX/cate.html";
     let DirectX_Number = 1;
     let DirectX = getFinishElement(path,DirectX_URL,DirectX_Number,"DirectX");
+    let 随笔_URL = "blog/随笔/cate.html";
+    let 随笔_Number = 0;
+    let 随笔 = getFinishElement(path,随笔_URL,随笔_Number,"随笔");
+
     mylist.appendChild(DirectX);
+    mylist.appendChild(随笔);
 }
