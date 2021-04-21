@@ -1,9 +1,0 @@
-[
-    {
-        "categories":"DirectX",
-        "date":"2021.04.21",
-        "url":"blog/DirectX/d12.html",
-        "title":"DirectX12的一些小知识",
-        "firstparagraph":"新接触了DX12，发现这种API真的威力无穷，但是随之而来的缺点就是API贴近硬件难以上手，文档不充分。避免遗忘就先在blog上记录一下。"
-    }
-]
